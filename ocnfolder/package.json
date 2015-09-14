@@ -1,0 +1,30 @@
+{
+  "name": "ocnfolder",
+  "version": "1.0.0",
+  "description": "A lightweight AnglularJS / Lunr.js full text search of a local directory",
+  "main": "dropindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadananda/ocnfolder.git"
+  },
+  "keywords": [
+    "local",
+    "search",
+    "full",
+    "text",
+    "search",
+    "dropbox",
+    "search",
+    "ocean",
+    "tool"
+  ],
+  "author": "Chad Jones <chadananda@gmail.com> (http://bahai-education.org/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chadananda/ocnfolder/issues"
+  },
+  "homepage": "https://github.com/chadananda/ocnfolder#readme"
+}
