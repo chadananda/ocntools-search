@@ -1,0 +1,174 @@
+{
+  "files": [
+    {
+      "id": 1,
+      "name": "1933, Suthers A Baha'i Pontiff in the Making.pdf",
+      "modified": "2015-09-21T10:11:37.000Z"
+    },
+    {
+      "id": 2,
+      "name": "1952, Cardell One Person's Search.docx",
+      "modified": "2015-09-21T10:11:37.000Z"
+    },
+    {
+      "id": 3,
+      "name": "1952, Frances Edelstein - 1985.docx",
+      "modified": "2015-09-21T10:11:37.000Z"
+    },
+    {
+      "id": 13,
+      "name": "Emogene Hoagg - Exemplary Pioneer.docx",
+      "modified": "2015-09-21T10:11:37.000Z"
+    },
+    {
+      "id": 14,
+      "name": "Irfan paper on Laura Barney.docx",
+      "modified": "2015-09-21T10:11:37.000Z"
+    }
+  ],
+  "directories": [
+    {
+      "name": "Abdu'l-Baha",
+      "contents": {
+        "files": [
+          {
+            "id": 4,
+            "name": "1898, Maxwell - Early Pilgrimage.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 5,
+            "name": "1900, Anton Haddad, Message from Acca.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 6,
+            "name": "1901, Breakwell, Hopper, Brittingham.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 7,
+            "name": "1901, Ethel Rosenberg.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 8,
+            "name": "1901, Isabella Brittingham.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 9,
+            "name": "1905, Grundy - Ten Days in the Light of Akka.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 10,
+            "name": "1906, Ali-Kuli Khan.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 11,
+            "name": "1906-1911, Dr. Falscher.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 12,
+            "name": "1907, Cobb, Wilhelm, Coy - In His Presence.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          }
+        ],
+        "directories": []
+      }
+    },
+    {
+      "name": "Shoghi Effendi",
+      "contents": {
+        "files": [
+          {
+            "id": 15,
+            "name": "1952 Nov, Talk by Margret Ford.txt",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 16,
+            "name": "1952, Jessie Revell Pilgrim Notes.txt",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 17,
+            "name": "1952, Nellie French Pilgrim Notes.txt",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 18,
+            "name": "1954, Irene Bennett (full).docx",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 19,
+            "name": "1954, Valera Allen - Haifa Impressions.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 20,
+            "name": "1954, William Sears - First and Last Meeting with Shoghi Effendi - Part II.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 21,
+            "name": "1955, Kenneth Christian - Excerpts.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 22,
+            "name": "1955, Peggy True.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 23,
+            "name": "1956, Angus Cowan.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 24,
+            "name": "1956, Elmer and Gladys Beasley.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 25,
+            "name": "1956, Gayle Woolson.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 26,
+            "name": "1956, Virginia Orbison.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 27,
+            "name": "1957, Alice Dudley - Extracts.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 28,
+            "name": "1957, Elmer and Gladys Beasley.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 29,
+            "name": "1957, Isobel Sabri.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          },
+          {
+            "id": 30,
+            "name": "1957, William Allison.html",
+            "modified": "2015-09-21T10:11:37.000Z"
+          }
+        ],
+        "directories": []
+      }
+    }
+  ],
+  "count": 30,
+  "totalSize": 2.6
+}
