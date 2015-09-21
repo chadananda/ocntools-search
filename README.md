@@ -1,4 +1,4 @@
-# ocnfolder
+# ocntools-search
 Quick folder full-text search using browser local storage to index contents of a single folder
  
 I manage hundreds of HTML books in local folders in public DropBox folders. I want a way to search the contents of these books from an index file. Here's what I have in mind:
