@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/chadananda/ocnfolder/issues"
   },
-  "homepage": "https://github.com/chadananda/ocnfolder#readme"
+  "homepage": "https://github.com/chadananda/ocnfolder#readme",
+  "dependencies": {
+    "bower": "^1.5.2"
+  }
 }
