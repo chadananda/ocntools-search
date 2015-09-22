@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="onctoolsSearchApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular/angular-csp.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-controller="SearchCtrl" ng-cloak>
+    <div class="container-fluid">
+        <div class="row">
+            <h2 class="col-md-5">{{ contents.count }} Documents, {{ contents.totalSize }}mb</h2>
+            <div class="col-md-7">
+                <div class="input-group" id="search-box">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" class="form-control" placeholder="search">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5" id="menu">
+                <div class="panel panel-default list-group fixed-height">
+                    <div class="panel-body">
+                        <div ng-include="'filesTree'"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="panel panel-default fixed-height">
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="filesTree">
+        <div ng-repeat="file in contents.files">
+            <a class="list-group-item">
+                <i class="glyphicon glyphicon-file" style="margin-left: {{ indent * 15 }}px"></i> {{ file.name }}
+            </a>
+        </div>
+        <div ng-repeat="dir in contents.directories">
+            <a class="list-group-item" data-toggle="collapse" data-target="#l{{ indent }}{{ $index }}" data-parent="#menu">
+                <i class="glyphicon glyphicon-folder-open" style="margin-left: {{ (indent - 1) * 15 }}px"></i> {{ dir.name }}
+            </a>
+            <div id="l{{ indent }}{{ $index }}" class="sublinks collapse">
+                <div ng-include="'filesTree'" ng-init="contents = dir.contents; indent = indent + 1;"></div>
+            </div>
+        </div>
+    </script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/searchCtrl.js"></script>
+</body>
+</html>
