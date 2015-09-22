@@ -1,0 +1,9 @@
+#search-box {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.fixed-height {
+    height: 600px;
+    overflow-y: scroll;
+}
