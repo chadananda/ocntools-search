@@ -1,1 +1,1 @@
-angular.module('onctoolsSearchApp', []);
+angular.module('ocntoolsSearchApp', []);
