@@ -13,7 +13,11 @@
             <h2 class="col-md-5">{{ contents.count }} Documents, {{ contents.totalSize }}mb</h2>
             <div class="col-md-7">
                 <div class="input-group" id="search-box">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="search()">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
                     <input type="text" class="form-control" placeholder="search"
                            ng-model="fulltextSearch" ng-keyup="$event.keyCode == 13 && search()">
                 </div>
@@ -41,8 +45,8 @@
                             </div>
                             <div ng-repeat="s in r.sentences|orderBy:blockIdNumeric">
                                 <div class="found-sentence row">
-                                    <div class="col-md-2"><span ng-if="s.blockId">block: {{ s.blockId }}</span></div>
-                                    <div class="col-md-10">{{ s.text }}</div>
+                                    <div class="col-sm-2"><span ng-if="s.blockId">block: {{ s.blockId }}</span></div>
+                                    <div class="col-sm-10">{{ s.text }}</div>
                                 </div>
                             </div>
                         </div>
