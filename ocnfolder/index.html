@@ -14,7 +14,8 @@
             <div class="col-md-7">
                 <div class="input-group" id="search-box">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                    <input type="text" class="form-control" placeholder="search">
+                    <input type="text" class="form-control" placeholder="search"
+                           ng-model="fulltextSearch" ng-keyup="$event.keyCode == 13 && search()">
                 </div>
             </div>
         </div>
@@ -29,7 +30,22 @@
             <div class="col-md-7">
                 <div class="panel panel-default fixed-height">
                     <div class="panel-body">
-
+                        <div ng-repeat="r in searchResults" class="form-group">
+                            <div class="found-file">
+                                <i class="glyphicon glyphicon-file"></i>
+                                <span>
+                                    {{ r.doc.name }} -
+                                    (<ng-pluralize count="r.sentences.length"
+                                                   when="{'one': '1 hit', 'other': '{} hits'}"></ng-pluralize>)
+                                </span>
+                            </div>
+                            <div ng-repeat="s in r.sentences|orderBy:blockIdNumeric">
+                                <div class="found-sentence row">
+                                    <div class="col-md-2"><span ng-if="s.blockId">block: {{ s.blockId }}</span></div>
+                                    <div class="col-md-10">{{ s.text }}</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
