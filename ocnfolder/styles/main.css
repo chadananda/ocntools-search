@@ -7,3 +7,16 @@
     height: 600px;
     overflow-y: scroll;
 }
+
+.found-file {
+    margin-bottom: 7px;
+}
+
+.found-file span {
+    font-size: 18px;
+}
+
+.found-sentence {
+    padding-left: 40px;
+    padding-bottom: 5px;
+}
