@@ -70,7 +70,33 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
         }($scope.contents, '../sample'));
 
         $q.all(promises).then(function() {
-
+            $scope.search = function() {
+                var search = sentencesIndex.search($scope.fulltextSearch);
+                $scope.searchResults = {};
+                sentenceDb.allDocs({
+                    include_docs: true,
+                    keys: search.map(function(e) { return e.ref; })
+                }).then(function(result) {
+                    result.rows.forEach(function(r) {
+                        var row = r.doc;
+                        if (!$scope.searchResults[row.docId]) {
+                            $scope.searchResults[row.docId] = {sentences: []};
+                            documentDb.get(row.docId).then(function(result) {
+                                $scope.searchResults[row.docId].doc = {};
+                                var urlParts = result.url.split('/');
+                                $scope.searchResults[row.docId].doc.name = urlParts[urlParts.length - 1];
+                                $scope.$apply();
+                            });
+                        }
+                        $scope.searchResults[row.docId].sentences.push(row);
+                    });
+                    $scope.$apply();
+                });
+            };
         });
+
+        $scope.search = function() {
+            $scope.searchResults = {};
+        };
     });
 });
