@@ -98,5 +98,9 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
         $scope.search = function() {
             $scope.searchResults = {};
         };
+
+        $scope.blockIdNumeric = function(sentence) {
+            return parseInt(sentence.blockId);
+        };
     });
 });
