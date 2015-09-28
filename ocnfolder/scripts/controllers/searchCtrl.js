@@ -27,6 +27,7 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
             var promises = [];
             data.files.forEach(function(f) {
                 var filename = path + f.name;
+                f.url = filename;
                 if (filename.endsWith('.pdf') || filename.endsWith('.docx')) return;
                 promises.push($http.get(filename, {transformResponse: undefined}).then(function(result) {
                     var text = result.data;
