@@ -34,6 +34,10 @@
             <div class="col-md-7">
                 <div class="panel panel-default fixed-height">
                     <div class="panel-body">
+                        <div ng-show="nothingFound">
+                            <h3>No results</h3>
+                            <div>Documents containing given sentence are not found</div>
+                        </div>
                         <div ng-repeat="r in searchResults" class="form-group">
                             <div class="found-file">
                                 <i class="glyphicon glyphicon-file"></i>
