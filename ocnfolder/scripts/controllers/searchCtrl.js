@@ -29,13 +29,20 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
                 var filename = path + f.name;
                 if (filename.endsWith('.pdf') || filename.endsWith('.docx')) return;
                 promises.push($http.get(filename, {transformResponse: undefined}).then(function(result) {
+                    var text = result.data;
                     var docId = f.id.toString();
+                    var name = $('<div>' + text + '</div>').find('title').text();
+                    console.log(name || 'not html');
+                    if (!name) {
+                        var urlParts = filename.split('/');
+                        name = urlParts[urlParts.length - 1];
+                    }
                     documentDb.put({
                         _id: docId,
                         url: filename,
+                        name: name,
                         timestamp: f.modified
                     });
-                    var text = result.data;
                     var sentences = [];
                     var createRecord = function(sentence, index) {
                         return {
@@ -81,10 +88,8 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
                         var row = r.doc;
                         if (!$scope.searchResults[row.docId]) {
                             $scope.searchResults[row.docId] = {sentences: []};
-                            documentDb.get(row.docId).then(function(result) {
-                                $scope.searchResults[row.docId].doc = {};
-                                var urlParts = result.url.split('/');
-                                $scope.searchResults[row.docId].doc.name = urlParts[urlParts.length - 1];
+                            documentDb.get(row.docId).then(function(doc) {
+                                $scope.searchResults[row.docId].doc = doc;
                                 $scope.$apply();
                             });
                         }
