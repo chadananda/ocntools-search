@@ -33,7 +33,6 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
                     var text = result.data;
                     var docId = f.id.toString();
                     var name = $('<div>' + text + '</div>').find('title').text();
-                    console.log(name || 'not html');
                     if (!name) {
                         var urlParts = filename.split('/');
                         name = urlParts[urlParts.length - 1];
@@ -78,7 +77,10 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
         }($scope.contents, '../sample'));
 
         $q.all(promises).then(function() {
+            $scope.nothingFound = false;
+
             $scope.search = function() {
+                if (!$scope.fulltextSearch) return;
                 var search = sentencesIndex.search($scope.fulltextSearch);
                 $scope.searchResults = {};
                 sentenceDb.allDocs({
@@ -96,14 +98,11 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
                         }
                         $scope.searchResults[row.docId].sentences.push(row);
                     });
+                    $scope.nothingFound = $.isEmptyObject($scope.searchResults);
                     $scope.$apply();
                 });
             };
         });
-
-        $scope.search = function() {
-            $scope.searchResults = {};
-        };
 
         $scope.blockIdNumeric = function(sentence) {
             return parseInt(sentence.blockId);
