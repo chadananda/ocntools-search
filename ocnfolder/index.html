@@ -38,7 +38,7 @@
                             <div class="found-file">
                                 <i class="glyphicon glyphicon-file"></i>
                                 <span>
-                                    {{ r.doc.name }} -
+                                    <a ng-href="{{ r.doc.url }}" target="_blank">{{ r.doc.name }}</a> -
                                     (<ng-pluralize count="r.sentences.length"
                                                    when="{'one': '1 hit', 'other': '{} hits'}"></ng-pluralize>)
                                 </span>
