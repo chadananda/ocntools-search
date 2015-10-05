@@ -21,6 +21,10 @@
     "ocean",
     "tool"
   ],
+  "preferGlobal": true,
+  "bin": {
+    "ocntools-search": "ocn.js"
+  },
   "author": "Chad Jones <chadananda@gmail.com> (http://bahai-education.org/)",
   "license": "ISC",
   "bugs": {
