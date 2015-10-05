@@ -1,4 +1,0 @@
-#!/bin/bash
-cd ocnfolder
-npm install
-./node_modules/bower/bin/bower install
