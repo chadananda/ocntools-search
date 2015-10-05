@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/chadananda/ocnfolder#readme",
   "dependencies": {
-    "bower": "^1.5.2"
+    "commander": "^2.8.1",
+    "uglify-js": "^2.4.24",
+    "uglifycss": "0.0.18"
   }
 }
