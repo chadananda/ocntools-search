@@ -8,7 +8,7 @@ String.prototype.getSentences = function() {
     return this.replace(/([a-z])[.!?]\s*['"‘“]?([A-Z])/g, '$1|$2').split('|');
 };
 
-app.controller('SearchCtrl', function($scope, $q, $http) {
+app.controller('SearchCtrl', ['$scope', '$q', '$http', function($scope, $q, $http) {
     $http.get('books.json').then(function(result) {
         $scope.contents = result.data;
         $scope.indent = 0;
@@ -74,7 +74,7 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
                 $.merge(promises, readFiles(d.contents, path + d.name));
             });
             return promises;
-        }($scope.contents, '../sample'));
+        }($scope.contents, '.'));
 
         $q.all(promises).then(function() {
             $scope.nothingFound = false;
@@ -108,4 +108,4 @@ app.controller('SearchCtrl', function($scope, $q, $http) {
             return parseInt(sentence.blockId);
         };
     });
-});
+}]);
